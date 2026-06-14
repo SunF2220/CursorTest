@@ -2,7 +2,10 @@ export type DigestItem = {
   id: string;
   title: string;
   url: string;
-  source: "github" | "x";
+  sourceId: string;
+  sourceType: string;
+  sourceLabel?: string;
+  tags: string[];
   author?: string;
   description?: string;
   publishedAt?: string;
@@ -13,7 +16,7 @@ export type DigestItem = {
 export type DigestPayload = {
   date: string;
   generatedAt: string;
-  github: DigestItem[];
-  x: DigestItem[];
+  configVersion: number;
+  items: DigestItem[];
   notes: string[];
 };

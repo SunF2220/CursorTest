@@ -1,0 +1,87 @@
+version: 2
+
+filters:
+  include:
+    - "claude code"
+    - codex
+    - harness
+    - "ai agent"
+    - agentic
+    - skills
+    - cursor
+    - mcp
+  exclude:
+    - partnership
+    - partner
+    - collaborat
+    - 合作
+    - 携手
+
+sources:
+  - id: github-agents
+    type: github
+    enabled: true
+    label: GitHub
+    tags:
+      - agent
+      - harness
+      - codex
+      - skills
+      - cursor
+    config:
+      minStars: 1000
+      perPage: 30
+      queries:
+        - '(harness OR "ai agent" OR agentic)'
+        - '("claude code" OR claude-code OR codex)'
+        - '(skills OR "agent skills" OR "mcp server")'
+        - '(cursor OR "cursor ai" OR "cursor agent")'
+
+  - id: claude-code-changelog
+    type: rss
+    enabled: true
+    label: Claude Code
+    tags:
+      - claude-code
+    config:
+      url: https://code.claude.com/docs/en/changelog/rss.xml
+      maxItems: 10
+      lookbackHours: 168
+      keywordFilter: false
+
+  - id: cursor-changelog
+    type: rss
+    enabled: true
+    label: Cursor
+    tags:
+      - cursor
+    config:
+      url: https://cursor.com/changelog/rss.xml
+      maxItems: 10
+      lookbackHours: 168
+      keywordFilter: false
+
+  - id: x-officials
+    type: x
+    enabled: true
+    label: X
+    tags:
+      - official
+    config:
+      keywordFilter: true
+      maxResults: 10
+      accounts:
+        - username: AnthropicAI
+          label: Anthropic (Claude)
+        - username: OpenAI
+          label: OpenAI
+        - username: GoogleDeepMind
+          label: Google DeepMind
+        - username: GoogleAI
+          label: Google AI
+        - username: Microsoft
+          label: Microsoft
+        - username: cursor
+          label: Cursor
+        - username: karpathy
+          label: Andrej Karpathy
