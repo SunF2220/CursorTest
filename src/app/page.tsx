@@ -8,19 +8,12 @@ async function loadDigest(): Promise<DigestPayload> {
   return JSON.parse(raw) as DigestPayload;
 }
 
-const SOURCE_TYPE_LABELS: Record<string, string> = {
-  github: "GitHub",
-  x: "X",
-  rss: "RSS",
-  html: "网页",
-};
-
 function ItemCard({ item }: { item: DigestItem }) {
   return (
     <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:border-[var(--accent-dim)]">
       <div className="mb-2 flex flex-wrap items-center gap-2 text-xs text-[var(--muted)]">
         <span className="rounded bg-[var(--border)] px-2 py-0.5 uppercase tracking-wide">
-          {item.sourceLabel ?? SOURCE_TYPE_LABELS[item.sourceType] ?? item.sourceType}
+          {item.sourceLabel ?? item.sourceType}
         </span>
         {item.author ? <span>{item.author}</span> : null}
         {item.publishedAt ? (
@@ -55,46 +48,55 @@ function ItemCard({ item }: { item: DigestItem }) {
   );
 }
 
-function groupBySourceType(items: DigestItem[]): Map<string, DigestItem[]> {
-  const groups = new Map<string, DigestItem[]>();
+function groupBySource(
+  items: DigestItem[],
+): { sourceId: string; label: string; items: DigestItem[] }[] {
+  const order: string[] = [];
+  const map = new Map<string, { label: string; items: DigestItem[] }>();
+
   for (const item of items) {
-    const key = item.sourceType;
-    const list = groups.get(key) ?? [];
-    list.push(item);
-    groups.set(key, list);
+    if (!map.has(item.sourceId)) {
+      order.push(item.sourceId);
+      map.set(item.sourceId, {
+        label: item.sourceLabel ?? item.sourceType,
+        items: [],
+      });
+    }
+    map.get(item.sourceId)!.items.push(item);
   }
-  return groups;
+
+  return order.map((sourceId) => ({
+    sourceId,
+    label: map.get(sourceId)!.label,
+    items: map.get(sourceId)!.items,
+  }));
 }
 
 export default async function Home() {
   const digest = await loadDigest();
-  const groups = groupBySourceType(digest.items);
-  const sourceOrder = ["github", "x", "rss", "html"];
-
-  const orderedTypes = [
-    ...sourceOrder.filter((t) => groups.has(t)),
-    ...[...groups.keys()].filter((t) => !sourceOrder.includes(t)),
-  ];
+  const groups = groupBySource(digest.items);
+  const total = digest.items.length;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
       <header className="mb-10 border-b border-[var(--border)] pb-8">
         <h1 className="text-3xl font-semibold tracking-tight">
-          AI Agent 每日摘要
+          AI 资讯每日摘要
         </h1>
         <p className="mt-2 text-[var(--muted)]">
-          日期 {digest.date} · 生成于{" "}
+          日期 {digest.date} · 共 {total} 条 · 生成于{" "}
           {new Date(digest.generatedAt).toLocaleString("zh-CN", {
-            timeZone: "UTC",
+            timeZone: "Asia/Shanghai",
           })}{" "}
-          UTC
+          (北京时间)
         </p>
         <p className="mt-4 text-sm text-[var(--muted)]">
-          来源与关键词由{" "}
+          来源：GitHub（stars &gt; 1000）、Claude Code Changelog、Cursor
+          Changelog、X 官方账号。配置见{" "}
           <code className="rounded bg-[var(--surface)] px-1.5 py-0.5 text-xs">
             config/digest.sources.yaml
-          </code>{" "}
-          配置。GitHub stars &gt; 1000；X 需 Bearer Token，并按关键词过滤。
+          </code>
+          。
         </p>
       </header>
 
@@ -109,30 +111,28 @@ export default async function Home() {
         </aside>
       ) : null}
 
-      {orderedTypes.length === 0 ? (
+      {groups.length === 0 ? (
         <p className="text-[var(--muted)]">
           暂无条目（可运行 npm run digest 或等待定时任务）。
         </p>
       ) : (
-        orderedTypes.map((sourceType) => {
-          const items = groups.get(sourceType) ?? [];
-          const label =
-            items[0]?.sourceLabel ??
-            SOURCE_TYPE_LABELS[sourceType] ??
-            sourceType;
-          return (
-            <section key={sourceType} className="mb-12 last:mb-0">
-              <h2 className="mb-4 text-xl font-semibold">{label}</h2>
-              <ul className="space-y-3">
-                {items.map((item) => (
-                  <li key={item.id}>
-                    <ItemCard item={item} />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })
+        groups.map((group) => (
+          <section key={group.sourceId} className="mb-12 last:mb-0">
+            <h2 className="mb-4 text-xl font-semibold">
+              {group.label}
+              <span className="ml-2 text-sm font-normal text-[var(--muted)]">
+                {group.items.length} 条
+              </span>
+            </h2>
+            <ul className="space-y-3">
+              {group.items.map((item) => (
+                <li key={item.id}>
+                  <ItemCard item={item} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
       )}
     </main>
   );

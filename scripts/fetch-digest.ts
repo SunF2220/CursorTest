@@ -1,9 +1,9 @@
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 import { getCollector } from "./collectors/registry";
-import { xUsesIncludeFilter } from "./collectors/x";
 import { dedupeItems } from "./pipeline/dedupe";
 import { applyFilters } from "./pipeline/filters";
+import { shouldApplyIncludeFilter } from "./pipeline/source-filters";
 import { loadDigestConfig } from "../src/lib/digest-config";
 import type { DigestItem, DigestPayload } from "../src/types/digest";
 
@@ -34,11 +34,8 @@ async function main() {
     }
 
     const { items } = await collector({ source, notes });
-    const useInclude =
-      source.type === "x" ? xUsesIncludeFilter(source) : false;
-
     const filtered = applyFilters(items, config.filters, {
-      include: useInclude,
+      include: shouldApplyIncludeFilter(source),
     });
     allItems.push(...filtered);
   }

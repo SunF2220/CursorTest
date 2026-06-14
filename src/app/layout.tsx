@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Agent 每日摘要",
-  description: "来自 GitHub 与 X 的 AI Agent / harness 相关资讯",
+  title: "AI 资讯每日摘要",
+  description:
+    "AI Agent、Claude Code、Codex、Cursor、skills 相关资讯，来自 GitHub、Changelog 与 X",
 };
 
 export default function RootLayout({

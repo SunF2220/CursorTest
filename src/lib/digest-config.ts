@@ -10,7 +10,7 @@ const FiltersSchema = z.object({
 
 const SourceSchema = z.object({
   id: z.string(),
-  type: z.enum(["github", "x"]),
+  type: z.enum(["github", "x", "rss", "html"]),
   enabled: z.boolean().default(true),
   label: z.string().optional(),
   tags: z.array(z.string()).default([]),
@@ -44,8 +44,16 @@ export const XSourceConfigSchema = z.object({
   maxResults: z.number().default(10),
 });
 
+export const RssSourceConfigSchema = z.object({
+  url: z.string().url(),
+  maxItems: z.number().default(10),
+  lookbackHours: z.number().default(24),
+  keywordFilter: z.boolean().default(false),
+});
+
 export type GitHubSourceConfig = z.infer<typeof GitHubSourceConfigSchema>;
 export type XSourceConfig = z.infer<typeof XSourceConfigSchema>;
+export type RssSourceConfig = z.infer<typeof RssSourceConfigSchema>;
 
 const CONFIG_PATH = path.join(process.cwd(), "config", "digest.sources.yaml");
 
