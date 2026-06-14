@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AI 资讯每日摘要</title>
+  <meta name="description" content="AI Agent、Claude Code、Codex、Cursor、skills 相关资讯每日摘要"/>
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #141416;
+      --border: #2a2a2e;
+      --text: #ececf1;
+      --muted: #8e8e98;
+      --accent: #10a37f;
+      --accent-dim: #0d8f6e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    main { max-width: 48rem; margin: 0 auto; padding: 3rem 1rem; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2.5rem; }
+    h1 { margin: 0; font-size: 1.875rem; font-weight: 600; }
+    .sub { margin-top: .5rem; color: var(--muted); }
+    .hint { margin-top: 1rem; font-size: .875rem; color: var(--muted); }
+    .mirror a { color: var(--accent); }
+    code { background: var(--surface); padding: .125rem .375rem; border-radius: .25rem; font-size: .75rem; }
+    .notes {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: .5rem;
+      border: 1px solid rgba(180, 83, 9, .5);
+      background: rgba(120, 53, 15, .3);
+      color: #fef3c7;
+      font-size: .875rem;
+    }
+    .notes-title { font-weight: 600; color: #fde68a; margin: 0 0 .5rem; }
+    .notes ul { margin: 0; padding-left: 1.25rem; }
+    .section { margin-bottom: 3rem; }
+    h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+    .count { font-size: .875rem; font-weight: 400; color: var(--muted); }
+    .card {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: .75rem;
+      padding: 1rem;
+      margin-bottom: .75rem;
+      transition: border-color .15s;
+    }
+    .card:hover { border-color: var(--accent-dim); }
+    .meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .75rem; color: var(--muted); margin-bottom: .5rem; }
+    .badge { background: var(--border); padding: .125rem .5rem; border-radius: .25rem; text-transform: uppercase; letter-spacing: .05em; }
+    .tags { color: var(--accent-dim); }
+    .title { color: var(--text); text-decoration: none; font-size: 1.125rem; font-weight: 500; }
+    .title:hover { color: var(--accent); }
+    .desc { margin: .5rem 0 0; font-size: .875rem; color: var(--muted); }
+    .empty { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>AI 资讯每日摘要</h1>
+      <p class="sub">日期 2026-06-14 · 共 38 条 · 生成于 2026/6/14 12:41:31 (北京时间)</p>
+      <p class="hint">来源：GitHub（stars &gt; 1000）、Claude Code Changelog、Cursor Changelog、X 官方账号。配置见 <code>config/digest.sources.yaml</code>。</p>
+      <p class="hint mirror">镜像访问：<a href="https://cdn.jsdelivr.net/gh/SunF2220/CursorTest@gh-pages/index.html" target="_blank" rel="noopener noreferrer">cdn.jsdelivr.net 在线预览</a> · 正式地址：<a href="https://sunf2220.github.io/CursorTest/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>（需在仓库 Settings → Pages 启用）</p>
+    </header>
+    <aside class="notes">
+      <p class="notes-title">提示</p>
+      <ul><li>未配置 TWITTER_BEARER_TOKEN，已跳过 X。请在仓库 Secrets 中设置后重新运行。</li></ul>
+    </aside>
+    <section class="section">
+        <h2>GitHub <span class="count">30 条</span></h2>
+        <article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:41:19Z">2026-06-14</time><span>★ 12,447</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/nearai/ironclaw" target="_blank" rel="noopener noreferrer">nearai/ironclaw</a>
+    <p class="desc">IronClaw is an Agent OS focused on privacy, security and extensibility</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:41:19Z">2026-06-14</time><span>★ 21,983</span><span>Swift</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/manaflow-ai/cmux" target="_blank" rel="noopener noreferrer">manaflow-ai/cmux</a>
+    <p class="desc">Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:41:09Z">2026-06-14</time><span>★ 62,139</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/code-yeongyu/oh-my-openagent" target="_blank" rel="noopener noreferrer">code-yeongyu/oh-my-openagent</a>
+    <p class="desc">omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:40:31Z">2026-06-14</time><span>★ 4,330</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/gptme/gptme" target="_blank" rel="noopener noreferrer">gptme/gptme</a>
+    <p class="desc">Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonomous agent on top!</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:39:36Z">2026-06-14</time><span>★ 4,272</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener noreferrer">microsoft/agent-governance-toolkit</a>
+    <p class="desc">AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:39:29Z">2026-06-14</time><span>★ 34,605</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/AstrBotDevs/AstrBot" target="_blank" rel="noopener noreferrer">AstrBotDevs/AstrBot</a>
+    <p class="desc">AI Agent Assistant &amp; development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:38:23Z">2026-06-14</time><span>★ 5,235</span><span>Go</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener noreferrer">the-open-agent/openagent</a>
+    <p class="desc">⚡️next-generation personal AI assistant powered by LLM, RAG and agent loops, supporting computer-use, browser-use and coding agent, demo: https://demo.openagentai.org</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:38:10Z">2026-06-14</time><span>★ 1,064</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/hkjarral/AVA-AI-Voice-Agent-for-Asterisk" target="_blank" rel="noopener noreferrer">hkjarral/AVA-AI-Voice-Agent-for-Asterisk</a>
+    <p class="desc">An open-source AI Voice Agent that integrates with Asterisk/FreePBX using Audiosocket/RTP technology</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:38:03Z">2026-06-14</time><span>★ 12,664</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/millionco/react-doctor" target="_blank" rel="noopener noreferrer">millionco/react-doctor</a>
+    <p class="desc">Your agent writes bad React. This catches it</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:36:31Z">2026-06-14</time><span>★ 78,621</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/lobehub/lobehub" target="_blank" rel="noopener noreferrer">lobehub/lobehub</a>
+    <p class="desc">🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:36:25Z">2026-06-14</time><span>★ 192,872</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">NousResearch/hermes-agent</a>
+    <p class="desc">The agent that grows with you</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:34:52Z">2026-06-14</time><span>★ 1,088</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/thClaws/thClaws" target="_blank" rel="noopener noreferrer">thClaws/thClaws</a>
+    <p class="desc">Open-source AI agent harness in native Rust — GUI, CLI, headless, and webapp from one binary. Multi-provider, MCP, skills, plugins, agent teams.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:34:41Z">2026-06-14</time><span>★ 4,905</span><span>JavaScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/steipete/agent-scripts" target="_blank" rel="noopener noreferrer">steipete/agent-scripts</a>
+    <p class="desc">Scripts for agents, shared between my repositories.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:33:23Z">2026-06-14</time><span>★ 1,228</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/dohooo/helmor" target="_blank" rel="noopener noreferrer">dohooo/helmor</a>
+    <p class="desc">Open-source local workbench for multi-agent software development.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:32:39Z">2026-06-14</time><span>★ 8,458</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/dmtrKovalenko/fff" target="_blank" rel="noopener noreferrer">dmtrKovalenko/fff</a>
+    <p class="desc">The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:30:26Z">2026-06-14</time><span>★ 2,807</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/bradygaster/squad" target="_blank" rel="noopener noreferrer">bradygaster/squad</a>
+    <p class="desc">Squad: AI agent teams for any project</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:29:47Z">2026-06-14</time><span>★ 90,888</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/openai/codex" target="_blank" rel="noopener noreferrer">openai/codex</a>
+    <p class="desc">Lightweight coding agent that runs in your terminal</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:28:12Z">2026-06-14</time><span>★ 4,762</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">stablyai/orca</a>
+    <p class="desc">Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:27:58Z">2026-06-14</time><span>★ 145,100</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/langgenius/dify" target="_blank" rel="noopener noreferrer">langgenius/dify</a>
+    <p class="desc">Production-ready platform for agentic workflow development.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:27:39Z">2026-06-14</time><span>★ 1,201</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/greyhaven-ai/autocontext" target="_blank" rel="noopener noreferrer">greyhaven-ai/autocontext</a>
+    <p class="desc">a recursive self-improving harness designed to help your agents (and future iterations of those agents) succeed on any task</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:24:55Z">2026-06-14</time><span>★ 85,887</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">TauricResearch/TradingAgents</a>
+    <p class="desc">TradingAgents: Multi-Agents LLM Financial Trading Framework</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:22:50Z">2026-06-14</time><span>★ 9,084</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/ccfddl/ccf-deadlines" target="_blank" rel="noopener noreferrer">ccfddl/ccf-deadlines</a>
+    <p class="desc">⏰ Agenticly track worldwide conference deadlines (Website, Python Cli, Wechat Applet)</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:21:47Z">2026-06-14</time><span>★ 57,639</span><span>HTML</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/shanraisshan/claude-code-best-practice" target="_blank" rel="noopener noreferrer">shanraisshan/claude-code-best-practice</a>
+    <p class="desc">from vibe coding to agentic engineering - practice makes claude perfect</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:20:27Z">2026-06-14</time><span>★ 5,138</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/Mai-with-u/MaiBot" target="_blank" rel="noopener noreferrer">Mai-with-u/MaiBot</a>
+    <p class="desc">MaiSaka, an LLM-based intelligent agent, is a digital lifeform devoted to understanding you and interacting in the style of a real human. She does not pursue perfection, nor does she seek efficiency; instead, she values warmth, authenticity, and genuine connection.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:19:52Z">2026-06-14</time><span>★ 38,095</span><span>JavaScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">pbakaus/impeccable</a>
+    <p class="desc">The design language that makes your AI harness better at design.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:18:24Z">2026-06-14</time><span>★ 1,158</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/Mesh-LLM/mesh-llm" target="_blank" rel="noopener noreferrer">Mesh-LLM/mesh-llm</a>
+    <p class="desc">Distributed AI/LLM for the people. Share compute privately or publicly to power your agents and chat.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:15:36Z">2026-06-14</time><span>★ 6,909</span><span>Python</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/Tracer-Cloud/opensre" target="_blank" rel="noopener noreferrer">Tracer-Cloud/opensre</a>
+    <p class="desc">Build your own AI SRE agents. The open source toolkit for the AI era.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:03:19Z">2026-06-14</time><span>★ 9,337</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/databendlabs/databend" target="_blank" rel="noopener noreferrer">databendlabs/databend</a>
+    <p class="desc">Data Agent Ready Warehouse : One for  Analytics, Search, AI, Python Sandbox.  — rebuilt from scratch. Unified architecture on your S3.</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:01:58Z">2026-06-14</time><span>★ 1,360</span><span>TypeScript</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/legeling/PromptHub" target="_blank" rel="noopener noreferrer">legeling/PromptHub</a>
+    <p class="desc">一款包含了 Prompt管理，Skill管理，Agent管理的一站式AI工具箱，助你高效管理提示词，一键分发skills ，一站式管理Agent资产，并实现云同步，备份，版本管理 | An all-in-one AI toolbox for prompt, agent, and skills management. Reuse prompts, distribute skills with one click, manage agent assets, and support cloud sync, backup, and version control</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">GitHub</span>
+      <time datetime="2026-06-14T04:01:04Z">2026-06-14</time><span>★ 7,043</span><span>Rust</span><span class="tags">agent · harness · codex · skills · cursor</span>
+    </div>
+    <a class="title" href="https://github.com/1jehuang/jcode" target="_blank" rel="noopener noreferrer">1jehuang/jcode</a>
+    <p class="desc">Coding Agent Harness</p>
+  </article>
+      </section><section class="section">
+        <h2>Claude Code <span class="count">7 条</span></h2>
+        <article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-13T00:52:35.000Z">2026-06-13</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-176" target="_blank" rel="noopener noreferrer">2.1.176</a>
+    <p class="desc">Session titles are now generated in the language of your conversation (set the language setting to pin a specific language) Added footerLinksRegexes setting for regex-matched link badges in the footer row, configurable via user or managed settings Improved Bedrock credential cach…</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-12T07:35:58.000Z">2026-06-12</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-175" target="_blank" rel="noopener noreferrer">2.1.175</a>
+    <p class="desc">Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed …</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-12T07:35:58.000Z">2026-06-12</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-174" target="_blank" rel="noopener noreferrer">2.1.174</a>
+    <p class="desc">Added wheelScrollAccelerationEnabled setting to disable mouse-wheel scroll acceleration in fullscreen mode Fixed the /model picker hiding the model family that Default resolves to — Opus now appears as its own row on Max/Team Premium/Enterprise plans, Sonnet on Pro/Team plans, an…</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-11T07:39:31.000Z">2026-06-11</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-173" target="_blank" rel="noopener noreferrer">2.1.173</a>
+    <p class="desc">Fixed Fable 5 model names with a [1m] suffix not being normalized — Fable 5 includes 1M context by default, so the suffix is now stripped automatically Fixed a spurious &quot;sandbox dependencies missing&quot; startup warning on Windows when sandbox was enabled in settings</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-11T00:39:33.000Z">2026-06-11</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-172" target="_blank" rel="noopener noreferrer">2.1.172</a>
+    <p class="desc">Sub-agents can now spawn their own sub-agents (up to 5 levels deep) Amazon Bedrock now reads the AWS region from ~/.aws config files when AWS_REGION isn't set, matching AWS SDK precedence; /status shows where the region came from Added a search bar when browsing a marketplace's p…</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-09T18:44:33.000Z">2026-06-09</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-170" target="_blank" rel="noopener noreferrer">2.1.170</a>
+    <p class="desc">Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use. Fable’s capabilities exceed those of any model we’ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5 Fixed sessions n…</p>
+  </article><article class="card">
+    <div class="meta">
+      <span class="badge">Claude Code</span>
+      <time datetime="2026-06-08T22:04:09.000Z">2026-06-08</time><span class="tags">claude-code</span>
+    </div>
+    <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-169" target="_blank" rel="noopener noreferrer">2.1.169</a>
+    <p class="desc">Self-hosted runner: added a post-session lifecycle hook that runs after the session ends and before the workspace is deleted, so you can snapshot uncommitted work or export logs; also made the child-process SIGTERM→SIGKILL window configurable (default unchanged at 5s) Added --saf…</p>
+  </article>
+      </section><section class="section">
+        <h2>Cursor <span class="count">1 条</span></h2>
+        <article class="card">
+    <div class="meta">
+      <span class="badge">Cursor</span>
+      <time datetime="2026-06-10T00:00:00.000Z">2026-06-10</time><span class="tags">cursor</span>
+    </div>
+    <a class="title" href="https://cursor.com/changelog/bugbot-updates-june-2026" target="_blank" rel="noopener noreferrer">Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs</a>
+    <p class="desc">The average review time for Bugbot is now ~90 seconds, down from ~5 minutes. Bugbot also finds 10% more bugs per review on average — 0.62, up from 0.56 — and costs ~22% less per run. &lt;figure&gt;&lt;img src=&quot;https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/bugbot…</p>
+  </article>
+      </section>
+  </main>
+</body>
+</html>
