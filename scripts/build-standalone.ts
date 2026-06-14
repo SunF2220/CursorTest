@@ -123,6 +123,7 @@ function renderPage(digest: DigestPayload): string {
     h1 { margin: 0; font-size: 1.875rem; font-weight: 600; }
     .sub { margin-top: .5rem; color: var(--muted); }
     .hint { margin-top: 1rem; font-size: .875rem; color: var(--muted); }
+    .mirror a { color: var(--accent); }
     code { background: var(--surface); padding: .125rem .375rem; border-radius: .25rem; font-size: .75rem; }
     .notes {
       margin-bottom: 2rem;
@@ -162,6 +163,7 @@ function renderPage(digest: DigestPayload): string {
       <h1>AI 资讯每日摘要</h1>
       <p class="sub">日期 ${escapeHtml(digest.date)} · 共 ${digest.items.length} 条 · 生成于 ${escapeHtml(generatedAt)} (北京时间)</p>
       <p class="hint">来源：GitHub（stars &gt; 1000）、Claude Code Changelog、Cursor Changelog、X 官方账号。配置见 <code>config/digest.sources.yaml</code>。</p>
+      <p class="hint mirror">镜像访问：<a href="https://cdn.jsdelivr.net/gh/SunF2220/CursorTest@gh-pages/index.html" target="_blank" rel="noopener noreferrer">cdn.jsdelivr.net 在线预览</a> · 正式地址：<a href="https://sunf2220.github.io/CursorTest/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>（需在仓库 Settings → Pages 启用）</p>
     </header>
     ${notes}
     ${sections}
