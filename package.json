@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
-    "digest": "tsx scripts/fetch-digest.ts"
+    "digest": "tsx scripts/fetch-digest.ts",
+    "build:site": "tsx scripts/build-standalone.ts"
   },
   "dependencies": {
     "next": "^15.5.14",

@@ -1,12 +1,12 @@
 {
   "date": "2026-06-14",
-  "generatedAt": "2026-06-14T04:11:14.705Z",
+  "generatedAt": "2026-06-14T04:39:10.577Z",
   "configVersion": 2,
   "items": [
     {
-      "id": "gh-575865240",
-      "title": "AstrBotDevs/AstrBot",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "id": "gh-1144115288",
+      "title": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
       "sourceId": "github-agents",
       "sourceType": "github",
       "sourceLabel": "GitHub",
@@ -17,15 +17,15 @@
         "skills",
         "cursor"
       ],
-      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "stars": 34604,
-      "language": "Python",
-      "publishedAt": "2026-06-14T04:09:01Z"
+      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
+      "stars": 21983,
+      "language": "Swift",
+      "publishedAt": "2026-06-14T04:38:33Z"
     },
     {
-      "id": "gh-1151205052",
-      "title": "bradygaster/squad",
-      "url": "https://github.com/bradygaster/squad",
+      "id": "gh-267749451",
+      "title": "the-open-agent/openagent",
+      "url": "https://github.com/the-open-agent/openagent",
       "sourceId": "github-agents",
       "sourceType": "github",
       "sourceLabel": "GitHub",
@@ -36,10 +36,10 @@
         "skills",
         "cursor"
       ],
-      "description": "Squad: AI agent teams for any project",
-      "stars": 2807,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T04:08:15Z"
+      "description": "⚡️next-generation personal AI assistant powered by LLM, RAG and agent loops, supporting computer-use, browser-use and coding agent, demo: https://demo.openagentai.org",
+      "stars": 5235,
+      "language": "Go",
+      "publishedAt": "2026-06-14T04:38:23Z"
     },
     {
       "id": "gh-1051393635",
@@ -58,12 +58,12 @@
       "description": "An open-source AI Voice Agent that integrates with Asterisk/FreePBX using Audiosocket/RTP technology",
       "stars": 1064,
       "language": "Python",
-      "publishedAt": "2026-06-14T04:07:50Z"
+      "publishedAt": "2026-06-14T04:38:10Z"
     },
     {
-      "id": "gh-1144115288",
-      "title": "manaflow-ai/cmux",
-      "url": "https://github.com/manaflow-ai/cmux",
+      "id": "gh-1156960719",
+      "title": "millionco/react-doctor",
+      "url": "https://github.com/millionco/react-doctor",
       "sourceId": "github-agents",
       "sourceType": "github",
       "sourceLabel": "GitHub",
@@ -74,10 +74,29 @@
         "skills",
         "cursor"
       ],
-      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents",
-      "stars": 21981,
-      "language": "Swift",
-      "publishedAt": "2026-06-14T04:07:29Z"
+      "description": "Your agent writes bad React. This catches it",
+      "stars": 12664,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:38:03Z"
+    },
+    {
+      "id": "gh-643445235",
+      "title": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "stars": 78620,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:36:31Z"
     },
     {
       "id": "gh-1024554267",
@@ -94,9 +113,47 @@
         "cursor"
       ],
       "description": "The agent that grows with you",
-      "stars": 192857,
+      "stars": 192872,
       "language": "Python",
-      "publishedAt": "2026-06-14T04:07:25Z"
+      "publishedAt": "2026-06-14T04:36:25Z"
+    },
+    {
+      "id": "gh-1215501706",
+      "title": "thClaws/thClaws",
+      "url": "https://github.com/thClaws/thClaws",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Open-source AI agent harness in native Rust — GUI, CLI, headless, and webapp from one binary. Multi-provider, MCP, skills, plugins, agent teams.",
+      "stars": 1088,
+      "language": "Rust",
+      "publishedAt": "2026-06-14T04:34:52Z"
+    },
+    {
+      "id": "gh-1092116209",
+      "title": "steipete/agent-scripts",
+      "url": "https://github.com/steipete/agent-scripts",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Scripts for agents, shared between my repositories.",
+      "stars": 4905,
+      "language": "JavaScript",
+      "publishedAt": "2026-06-14T04:34:41Z"
     },
     {
       "id": "gh-1199028956",
@@ -113,9 +170,66 @@
         "cursor"
       ],
       "description": "Open-source local workbench for multi-agent software development.",
-      "stars": 1227,
+      "stars": 1228,
       "language": "TypeScript",
-      "publishedAt": "2026-06-14T04:06:58Z"
+      "publishedAt": "2026-06-14T04:33:23Z"
+    },
+    {
+      "id": "gh-1029972503",
+      "title": "dmtrKovalenko/fff",
+      "url": "https://github.com/dmtrKovalenko/fff",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS",
+      "stars": 8458,
+      "language": "Rust",
+      "publishedAt": "2026-06-14T04:32:39Z"
+    },
+    {
+      "id": "gh-1151205052",
+      "title": "bradygaster/squad",
+      "url": "https://github.com/bradygaster/squad",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Squad: AI agent teams for any project",
+      "stars": 2807,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:30:26Z"
+    },
+    {
+      "id": "gh-575865240",
+      "title": "AstrBotDevs/AstrBot",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "stars": 34605,
+      "language": "Python",
+      "publishedAt": "2026-06-14T04:29:56Z"
     },
     {
       "id": "gh-965415649",
@@ -132,9 +246,218 @@
         "cursor"
       ],
       "description": "Lightweight coding agent that runs in your terminal",
-      "stars": 90886,
+      "stars": 90888,
       "language": "Rust",
-      "publishedAt": "2026-06-14T04:03:24Z"
+      "publishedAt": "2026-06-14T04:29:47Z"
+    },
+    {
+      "id": "gh-1183888342",
+      "title": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "stars": 4761,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:28:12Z"
+    },
+    {
+      "id": "gh-626805178",
+      "title": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Production-ready platform for agentic workflow development.",
+      "stars": 145100,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:27:58Z"
+    },
+    {
+      "id": "gh-1155776799",
+      "title": "greyhaven-ai/autocontext",
+      "url": "https://github.com/greyhaven-ai/autocontext",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "a recursive self-improving harness designed to help your agents (and future iterations of those agents) succeed on any task",
+      "stars": 1201,
+      "language": "Python",
+      "publishedAt": "2026-06-14T04:27:39Z"
+    },
+    {
+      "id": "gh-909213664",
+      "title": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "stars": 85887,
+      "language": "Python",
+      "publishedAt": "2026-06-14T04:24:55Z"
+    },
+    {
+      "id": "gh-334848347",
+      "title": "ccfddl/ccf-deadlines",
+      "url": "https://github.com/ccfddl/ccf-deadlines",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "⏰ Agenticly track worldwide conference deadlines (Website, Python Cli, Wechat Applet)",
+      "stars": 9084,
+      "language": "Rust",
+      "publishedAt": "2026-06-14T04:22:50Z"
+    },
+    {
+      "id": "gh-1087192965",
+      "title": "shanraisshan/claude-code-best-practice",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "from vibe coding to agentic engineering - practice makes claude perfect",
+      "stars": 57639,
+      "language": "HTML",
+      "publishedAt": "2026-06-14T04:21:47Z"
+    },
+    {
+      "id": "gh-938859604",
+      "title": "Mai-with-u/MaiBot",
+      "url": "https://github.com/Mai-with-u/MaiBot",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "MaiSaka, an LLM-based intelligent agent, is a digital lifeform devoted to understanding you and interacting in the style of a real human. She does not pursue perfection, nor does she seek efficiency; instead, she values warmth, authenticity, and genuine connection.",
+      "stars": 5138,
+      "language": "Python",
+      "publishedAt": "2026-06-14T04:20:27Z"
+    },
+    {
+      "id": "gh-1097346685",
+      "title": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "The design language that makes your AI harness better at design.",
+      "stars": 38095,
+      "language": "JavaScript",
+      "publishedAt": "2026-06-14T04:19:52Z"
+    },
+    {
+      "id": "gh-1207639951",
+      "title": "EKKOLearnAI/hermes-web-ui",
+      "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics ",
+      "stars": 7871,
+      "language": "TypeScript",
+      "publishedAt": "2026-06-14T04:18:36Z"
+    },
+    {
+      "id": "gh-1155025406",
+      "title": "Mesh-LLM/mesh-llm",
+      "url": "https://github.com/Mesh-LLM/mesh-llm",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Distributed AI/LLM for the people. Share compute privately or publicly to power your agents and chat.",
+      "stars": 1158,
+      "language": "Rust",
+      "publishedAt": "2026-06-14T04:18:24Z"
+    },
+    {
+      "id": "gh-1133141258",
+      "title": "Tracer-Cloud/opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "sourceId": "github-agents",
+      "sourceType": "github",
+      "sourceLabel": "GitHub",
+      "tags": [
+        "agent",
+        "harness",
+        "codex",
+        "skills",
+        "cursor"
+      ],
+      "description": "Build your own AI SRE agents. The open source toolkit for the AI era.",
+      "stars": 6909,
+      "language": "Python",
+      "publishedAt": "2026-06-14T04:15:36Z"
     },
     {
       "id": "gh-302827809",
@@ -175,25 +498,6 @@
       "publishedAt": "2026-06-14T04:01:58Z"
     },
     {
-      "id": "gh-1141592887",
-      "title": "nrslib/takt",
-      "url": "https://github.com/nrslib/takt",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "TAKT Agent Koordination Topology - Define how AI agents coordinate, where humans intervene, and what gets recorded — in YAML",
-      "stars": 1131,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T04:01:33Z"
-    },
-    {
       "id": "gh-1128204614",
       "title": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
@@ -208,28 +512,9 @@
         "cursor"
       ],
       "description": "Coding Agent Harness",
-      "stars": 7044,
+      "stars": 7043,
       "language": "Rust",
       "publishedAt": "2026-06-14T04:01:04Z"
-    },
-    {
-      "id": "gh-1207639951",
-      "title": "EKKOLearnAI/hermes-web-ui",
-      "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics ",
-      "stars": 7871,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:59:48Z"
     },
     {
       "id": "gh-1039587768",
@@ -265,7 +550,7 @@
         "cursor"
       ],
       "description": "The open source coding agent.",
-      "stars": 174091,
+      "stars": 174096,
       "language": "TypeScript",
       "publishedAt": "2026-06-14T03:56:55Z"
     },
@@ -284,293 +569,9 @@
         "cursor"
       ],
       "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "stars": 71123,
+      "stars": 71125,
       "language": "Python",
       "publishedAt": "2026-06-14T03:56:41Z"
-    },
-    {
-      "id": "gh-1133141258",
-      "title": "Tracer-Cloud/opensre",
-      "url": "https://github.com/Tracer-Cloud/opensre",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "Build your own AI SRE agents. The open source toolkit for the AI era.",
-      "stars": 6907,
-      "language": "Python",
-      "publishedAt": "2026-06-14T03:54:09Z"
-    },
-    {
-      "id": "gh-1196617276",
-      "title": "nesquena/hermes-webui",
-      "url": "https://github.com/nesquena/hermes-webui",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
-      "stars": 14381,
-      "language": "Python",
-      "publishedAt": "2026-06-14T03:52:43Z"
-    },
-    {
-      "id": "gh-1183888342",
-      "title": "stablyai/orca",
-      "url": "https://github.com/stablyai/orca",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-      "stars": 4761,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:48:10Z"
-    },
-    {
-      "id": "gh-643445235",
-      "title": "lobehub/lobehub",
-      "url": "https://github.com/lobehub/lobehub",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "stars": 78619,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:47:23Z"
-    },
-    {
-      "id": "gh-805155266",
-      "title": "CherryHQ/cherry-studio",
-      "url": "https://github.com/CherryHQ/cherry-studio",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
-      "stars": 47289,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:47:16Z"
-    },
-    {
-      "id": "gh-824541776",
-      "title": "xerrors/Yuxi",
-      "url": "https://github.com/xerrors/Yuxi",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "结合知识库、知识图谱管理的 多租户 Agent Harness 平台。 An agent harness that integrates a LightRAG knowledge base and knowledge graphs. Build with LangChain + Vue + FastAPI, support DeepAgents、MinerU PDF、Neo4j 、MCP.",
-      "stars": 5559,
-      "language": "Python",
-      "publishedAt": "2026-06-14T03:46:55Z"
-    },
-    {
-      "id": "gh-1124479538",
-      "title": "benchflow-ai/skillsbench",
-      "url": "https://github.com/benchflow-ai/skillsbench",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "SkillsBench evaluates how well skills work and how effective agents are at using them.",
-      "stars": 1346,
-      "language": "PDDL",
-      "publishedAt": "2026-06-14T03:45:32Z"
-    },
-    {
-      "id": "gh-983305992",
-      "title": "rachelos/we-mp-rss",
-      "url": "https://github.com/rachelos/we-mp-rss",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "✨符合阅读习惯的微信公众号助手、微信公众号转MarkDown、微信公众号转PDF、定时更新订阅公众号文章、生成微信公众号RSS订阅源、导出微信公众号订阅源、支持微信公众号Webhook/微信公众号API/AI Agent接入微信公众号微信公众号、订阅微信公众号、微信公众号助手 、微信公众号阅读、微信公众号接口、微信公众号爬虫、微信公众号监测、标签订阅微信公众号、微信公众号源、微信公众号读书、微信公众号文章、微信公众号框架、微信公众号管理、微信公众号源、微信公众号平台、微信公众号代码、微信公众号系统、微信公众号源码",
-      "stars": 3512,
-      "language": "Python",
-      "publishedAt": "2026-06-14T03:44:52Z"
-    },
-    {
-      "id": "gh-1146471921",
-      "title": "proma-ai/Proma",
-      "url": "https://github.com/proma-ai/Proma",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "把最丝滑的通用 Agent 体验带进你的工作流，为 100x 专业用户而生的未来产品，正在实现 proactive Agent 阶段。基于 Claude Agent SDK 的完整开源实践，原生支持飞书群聊调用、灵活接入任意大模型供应商 —— 让顶级 Agent 能力真正跑在你每天用的地方。",
-      "stars": 1263,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:43:14Z"
-    },
-    {
-      "id": "gh-704959035",
-      "title": "WeThinkIn/AIGC-Interview-Book",
-      "url": "https://github.com/WeThinkIn/AIGC-Interview-Book",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "【三年面试五年模拟】AIGC/LLM/AI Agent算法工程师面试秘籍。涵盖AIGC、LLM大模型、AI Agent、传统深度学习、自动驾驶、机器学习、计算机视觉、自然语言处理、强化学习、大数据挖掘、具身智能、元宇宙、AGI等AI行业面试笔试干货经验与核心知识。",
-      "stars": 3925,
-      "publishedAt": "2026-06-14T03:41:57Z"
-    },
-    {
-      "id": "gh-626805178",
-      "title": "langgenius/dify",
-      "url": "https://github.com/langgenius/dify",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "Production-ready platform for agentic workflow development.",
-      "stars": 145096,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:41:56Z"
-    },
-    {
-      "id": "gh-839037098",
-      "title": "mastra-ai/mastra",
-      "url": "https://github.com/mastra-ai/mastra",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "stars": 25034,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:41:27Z"
-    },
-    {
-      "id": "gh-1125856365",
-      "title": "can1357/oh-my-pi",
-      "url": "https://github.com/can1357/oh-my-pi",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "⌥  AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
-      "stars": 12275,
-      "language": "TypeScript",
-      "publishedAt": "2026-06-14T03:41:23Z"
-    },
-    {
-      "id": "gh-1087192965",
-      "title": "shanraisshan/claude-code-best-practice",
-      "url": "https://github.com/shanraisshan/claude-code-best-practice",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "from vibe coding to agentic engineering - practice makes claude perfect",
-      "stars": 57636,
-      "language": "HTML",
-      "publishedAt": "2026-06-14T03:40:46Z"
-    },
-    {
-      "id": "gh-1182212878",
-      "title": "iOfficeAI/OfficeCLI",
-      "url": "https://github.com/iOfficeAI/OfficeCLI",
-      "sourceId": "github-agents",
-      "sourceType": "github",
-      "sourceLabel": "GitHub",
-      "tags": [
-        "agent",
-        "harness",
-        "codex",
-        "skills",
-        "cursor"
-      ],
-      "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "stars": 7014,
-      "language": "C#",
-      "publishedAt": "2026-06-14T03:40:40Z"
     },
     {
       "id": "rss-claude-code-changelog-https://code.claude.com/docs/en/changelog#2-1-176",
