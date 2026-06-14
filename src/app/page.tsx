@@ -1,6 +1,6 @@
 import { readFile } from "fs/promises";
 import path from "path";
-import type { DigestPayload } from "@/types/digest";
+import type { DigestItem, DigestPayload } from "@/types/digest";
 
 async function loadDigest(): Promise<DigestPayload> {
   const file = path.join(process.cwd(), "public", "data", "digest.json");
@@ -8,31 +8,21 @@ async function loadDigest(): Promise<DigestPayload> {
   return JSON.parse(raw) as DigestPayload;
 }
 
-function ItemCard({
-  item,
-}: {
-  item: {
-    title: string;
-    url: string;
-    source: string;
-    author?: string;
-    description?: string;
-    publishedAt?: string;
-    stars?: number;
-    language?: string;
-  };
-}) {
+const SOURCE_TYPE_LABELS: Record<string, string> = {
+  github: "GitHub",
+  x: "X",
+  rss: "RSS",
+  html: "网页",
+};
+
+function ItemCard({ item }: { item: DigestItem }) {
   return (
-    <article
-      className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:border-[var(--accent-dim)]"
-    >
+    <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:border-[var(--accent-dim)]">
       <div className="mb-2 flex flex-wrap items-center gap-2 text-xs text-[var(--muted)]">
         <span className="rounded bg-[var(--border)] px-2 py-0.5 uppercase tracking-wide">
-          {item.source}
+          {item.sourceLabel ?? SOURCE_TYPE_LABELS[item.sourceType] ?? item.sourceType}
         </span>
-        {item.author ? (
-          <span>{item.author}</span>
-        ) : null}
+        {item.author ? <span>{item.author}</span> : null}
         {item.publishedAt ? (
           <time dateTime={item.publishedAt}>
             {item.publishedAt.slice(0, 10)}
@@ -42,6 +32,11 @@ function ItemCard({
           <span>★ {item.stars.toLocaleString()}</span>
         ) : null}
         {item.language ? <span>{item.language}</span> : null}
+        {item.tags.length > 0 ? (
+          <span className="text-[var(--accent-dim)]">
+            {item.tags.join(" · ")}
+          </span>
+        ) : null}
       </div>
       <a
         href={item.url}
@@ -51,7 +46,7 @@ function ItemCard({
       >
         {item.title}
       </a>
-      {item.description ? (
+      {item.description && item.sourceType !== "x" ? (
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           {item.description}
         </p>
@@ -60,8 +55,26 @@ function ItemCard({
   );
 }
 
+function groupBySourceType(items: DigestItem[]): Map<string, DigestItem[]> {
+  const groups = new Map<string, DigestItem[]>();
+  for (const item of items) {
+    const key = item.sourceType;
+    const list = groups.get(key) ?? [];
+    list.push(item);
+    groups.set(key, list);
+  }
+  return groups;
+}
+
 export default async function Home() {
   const digest = await loadDigest();
+  const groups = groupBySourceType(digest.items);
+  const sourceOrder = ["github", "x", "rss", "html"];
+
+  const orderedTypes = [
+    ...sourceOrder.filter((t) => groups.has(t)),
+    ...[...groups.keys()].filter((t) => !sourceOrder.includes(t)),
+  ];
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
@@ -77,8 +90,11 @@ export default async function Home() {
           UTC
         </p>
         <p className="mt-4 text-sm text-[var(--muted)]">
-          GitHub：stars &gt; 100 且近期有推送，关键词含 agent / harness；X：Anthropic、OpenAI、Google、Microsoft
-          与 @karpathy（需配置 Bearer Token）。
+          来源与关键词由{" "}
+          <code className="rounded bg-[var(--surface)] px-1.5 py-0.5 text-xs">
+            config/digest.sources.yaml
+          </code>{" "}
+          配置。GitHub stars &gt; 1000；X 需 Bearer Token，并按关键词过滤。
         </p>
       </header>
 
@@ -93,35 +109,31 @@ export default async function Home() {
         </aside>
       ) : null}
 
-      <section className="mb-12">
-        <h2 className="mb-4 text-xl font-semibold">GitHub</h2>
-        {digest.github.length === 0 ? (
-          <p className="text-[var(--muted)]">暂无条目（可运行抓取或等待定时任务）。</p>
-        ) : (
-          <ul className="space-y-3">
-            {digest.github.map((item) => (
-              <li key={item.id}>
-                <ItemCard item={item} />
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      <section>
-        <h2 className="mb-4 text-xl font-semibold">X</h2>
-        {digest.x.length === 0 ? (
-          <p className="text-[var(--muted)]">暂无条目。</p>
-        ) : (
-          <ul className="space-y-3">
-            {digest.x.map((item) => (
-              <li key={item.id}>
-                <ItemCard item={item} />
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      {orderedTypes.length === 0 ? (
+        <p className="text-[var(--muted)]">
+          暂无条目（可运行 npm run digest 或等待定时任务）。
+        </p>
+      ) : (
+        orderedTypes.map((sourceType) => {
+          const items = groups.get(sourceType) ?? [];
+          const label =
+            items[0]?.sourceLabel ??
+            SOURCE_TYPE_LABELS[sourceType] ??
+            sourceType;
+          return (
+            <section key={sourceType} className="mb-12 last:mb-0">
+              <h2 className="mb-4 text-xl font-semibold">{label}</h2>
+              <ul className="space-y-3">
+                {items.map((item) => (
+                  <li key={item.id}>
+                    <ItemCard item={item} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })
+      )}
     </main>
   );
 }

@@ -1,11 +1,82 @@
-export const X_USERNAMES = [
-  { username: "AnthropicAI", label: "Anthropic (Claude)" },
-  { username: "OpenAI", label: "OpenAI" },
-  { username: "GoogleDeepMind", label: "Google DeepMind" },
-  { username: "GoogleAI", label: "Google AI" },
-  { username: "Microsoft", label: "Microsoft" },
-  { username: "karpathy", label: "Andrej Karpathy" },
-] as const;
+import { readFileSync } from "fs";
+import path from "path";
+import { parse } from "yaml";
+import { z } from "zod";
 
-export const GITHUB_SEARCH_QUERY_BASE =
-  "(harness OR \"ai agent\" OR agentic) stars:>100";
+const FiltersSchema = z.object({
+  include: z.array(z.string()).default([]),
+  exclude: z.array(z.string()).default([]),
+});
+
+const SourceSchema = z.object({
+  id: z.string(),
+  type: z.enum(["github", "x"]),
+  enabled: z.boolean().default(true),
+  label: z.string().optional(),
+  tags: z.array(z.string()).default([]),
+  config: z.record(z.string(), z.unknown()),
+});
+
+const DigestConfigSchema = z.object({
+  version: z.number(),
+  filters: FiltersSchema,
+  sources: z.array(SourceSchema),
+});
+
+export type DigestFilters = z.infer<typeof FiltersSchema>;
+export type SourceDefinition = z.infer<typeof SourceSchema>;
+export type DigestConfig = z.infer<typeof DigestConfigSchema>;
+
+export const GitHubSourceConfigSchema = z.object({
+  minStars: z.number().default(1000),
+  perPage: z.number().default(30),
+  queries: z.array(z.string()).min(1),
+});
+
+export const XAccountSchema = z.object({
+  username: z.string(),
+  label: z.string(),
+});
+
+export const XSourceConfigSchema = z.object({
+  accounts: z.array(XAccountSchema).min(1),
+  keywordFilter: z.boolean().default(true),
+  maxResults: z.number().default(10),
+});
+
+export type GitHubSourceConfig = z.infer<typeof GitHubSourceConfigSchema>;
+export type XSourceConfig = z.infer<typeof XSourceConfigSchema>;
+
+const CONFIG_PATH = path.join(process.cwd(), "config", "digest.sources.yaml");
+
+function applyEnvOverrides(config: DigestConfig): DigestConfig {
+  const minStars = process.env.DIGEST_MIN_STARS;
+  if (minStars) {
+    const parsed = Number.parseInt(minStars, 10);
+    if (!Number.isNaN(parsed)) {
+      for (const source of config.sources) {
+        if (source.type === "github") {
+          source.config.minStars = parsed;
+        }
+      }
+    }
+  }
+
+  const extraExclude = process.env.DIGEST_EXCLUDE;
+  if (extraExclude) {
+    const parts = extraExclude
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    config.filters.exclude = [...config.filters.exclude, ...parts];
+  }
+
+  return config;
+}
+
+export function loadDigestConfig(): DigestConfig {
+  const raw = readFileSync(CONFIG_PATH, "utf-8");
+  const parsed = parse(raw) as unknown;
+  const config = DigestConfigSchema.parse(parsed);
+  return applyEnvOverrides(config);
+}
